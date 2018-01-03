@@ -1,0 +1,17 @@
+{
+  "name": "awesome-bucketlist",
+  "version": "1.0.0",
+  "description": "bucketlist sample using MEAN",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0-rc0"
+  }
+}
