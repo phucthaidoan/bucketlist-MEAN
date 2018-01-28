@@ -28,4 +28,18 @@ export class ListService {
         .map(res => res.json());
   }
 
+  public addList(list: List) {
+    let URI = `${this.serverApi}/bucketlist`;
+    let headers = new Headers();
+    const body = JSON.stringify({
+      title: list.title,
+      description: list.description,      
+      category: list.category
+    });
+
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post(URI, body, {headers: headers})
+      .map(res => res.json());
+  }
 }

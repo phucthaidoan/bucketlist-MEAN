@@ -21,4 +21,10 @@ export class ViewListComponent implements OnInit {
     this.listServ.getAllLists()
       .subscribe(response => this.lists = response);
   }
+
+  public deleteList(list: List) {
+    this.listServ
+      .deleteList(list._id)
+      .subscribe(response => this.lists = this.lists.filter(item => item._id !== list._id));
+  }
 }

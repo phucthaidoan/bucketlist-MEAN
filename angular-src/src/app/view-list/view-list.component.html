@@ -14,7 +14,7 @@
             <td>{{list.category}}</td>
             <td>{{list.title}}</td>
             <td>{{list.description}}</td>
-            <td><button type="button">Delete</button></td>
+            <td><button type="button" (click)='deleteList(list);$event.stopPropagation();'>Delete</button></td>
         </tr>
     </tbody>
 </table>
